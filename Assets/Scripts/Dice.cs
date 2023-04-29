@@ -7,12 +7,12 @@ public class Dice : MonoBehaviour
 {
     public bool roll = false;
     public int rolledNumber = 0;
-    public List<GameObject> diceCanvases;
+    public GameObject[] diceCanvases;
 
     private Rigidbody rb;
     private bool hasBeenHitted = false;
-    private float force = 4f;
-    private (float, float) torqueForce = (1f, 3f);
+    private float force = .3f;
+    private (float, float) torqueForce = (2f, 4f);
 
     private Dictionary<int, int> diceMap = new Dictionary<int, int> {
         { 1, 6 },
@@ -32,14 +32,17 @@ public class Dice : MonoBehaviour
     {
         if (rb.velocity == Vector3.zero && hasBeenHitted && rb.isKinematic == false)
         {
+            if (rolledNumber < 1)
+                return;
+
             ActivateDiceCanvas(rolledNumber);
             hasBeenHitted = false;
+            
+            Destroy(this.gameObject, 3f);
         }
 
         if (roll)
         {   
-            diceCanvases.ForEach(go => go.SetActive(false));
-
             rb.isKinematic = false;
             rb.AddForce(force * Vector3.up, ForceMode.Impulse);
             rb.AddTorque(new Vector3(Random.Range(0, 10),
@@ -61,22 +64,19 @@ public class Dice : MonoBehaviour
                                     Random.Range(torqueForce.Item1, torqueForce.Item2),
                                     Random.Range(torqueForce.Item1, torqueForce.Item2)),
                                     ForceMode.Impulse);
+
+            hasBeenHitted = true;
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Tags"))
-        {
-            Debug.Log(other.gameObject.name);
-        }
-    }
+   
     public void SetRolledNumber(int number)
     {
         rolledNumber = diceMap[number];
     }
     private void ActivateDiceCanvas(int rolledNumber)
     {
-        Debug.Log($"Activating canvas nr : {rolledNumber - 1}");
-        diceCanvases.ElementAt(rolledNumber - 1).SetActive(true);
+        int index = rolledNumber - 1;
+        Debug.Log($"Index : {index}");
+        diceCanvases[index].SetActive(true);
     }
 }

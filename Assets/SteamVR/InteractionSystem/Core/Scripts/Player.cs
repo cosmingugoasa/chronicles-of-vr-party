@@ -32,7 +32,7 @@ namespace Valve.VR.InteractionSystem
 		public GameObject rigSteamVR;
 
 		[Tooltip( "These objects are enabled when SteamVR is not available, or when the user toggles out of VR" )]
-		public GameObject rig2DFallback;
+		public GameObject rig2DFallback = null;
 
 		[Tooltip( "The audio listener for this player" )]
 		public Transform audioListener;
