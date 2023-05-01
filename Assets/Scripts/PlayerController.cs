@@ -17,6 +17,15 @@ public class PlayerController : NetworkBehaviour
 
     private CharacterController characterController;
 
+
+    public override void OnNetworkSpawn()
+    {
+        int index = SceneSessionManager.AddClient(OwnerClientId);
+        var spawnPoint = GameObject.Find("MapRoute").GetComponent<MapManager>().spawnPoints[index];
+        transform.position = spawnPoint.position;
+        transform.rotation = spawnPoint.rotation;
+    }
+
     private void Start()
     {
         characterController = GetComponent<CharacterController>();

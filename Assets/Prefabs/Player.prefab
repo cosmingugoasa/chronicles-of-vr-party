@@ -1589,6 +1589,7 @@ GameObject:
   - component: {fileID: 1921576828}
   - component: {fileID: 5070695878120368962}
   - component: {fileID: 1677639576}
+  - component: {fileID: 1929466421}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -1709,11 +1710,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb65e7962c5a6a045bc479f925ef2fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCanvas: {fileID: 0}
+  playersHead: {fileID: 5070695878120036846}
+  UIPointer: {fileID: 6096259533547338410}
+  UICanvas: {fileID: 0}
   xButtonInput:
     actionPath: /actions/default/in/XButton
     needsReinit: 0
   playerUIPosition: {fileID: 1569478945}
+  numberOfPlayers: {fileID: 0}
+--- !u!114 &1929466421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5070695878120394478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2868252ab5c4d1da357e8f11f1b524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1 &5070695878120396104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,11 +1924,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR_Pointer
       objectReference: {fileID: 0}
+    - target: {fileID: 9059479215712200520, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
 --- !u!20 &1827030478688070027 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3492846546869924969, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
+  m_PrefabInstance: {fileID: 2964494351186664930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6096259533547338410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9059479215712200520, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
   m_PrefabInstance: {fileID: 2964494351186664930}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7865090818670112891 stripped

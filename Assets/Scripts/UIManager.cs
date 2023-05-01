@@ -40,11 +40,11 @@ public class UIManager : MonoBehaviour
 
     public void IncrementPlayerCounter()
     {
-        numberOfPlayers.SetText(SceneSessionManager.currentPlayersInSession++.ToString());
+        numberOfPlayers.SetText(SceneSessionManager.currentPlayersInSession.Value++.ToString());
     }
     public void ReducePlayerCounter()
     {
-        numberOfPlayers.SetText(SceneSessionManager.currentPlayersInSession--.ToString());
+        numberOfPlayers.SetText(SceneSessionManager.currentPlayersInSession.Value--.ToString());
     }
     public void testJoin() {
         Debug.Log("JOIN");

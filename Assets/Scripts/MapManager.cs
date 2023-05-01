@@ -5,4 +5,6 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     public Transform[] platforms;
+    public Transform[] spawnPoints;
+
 }
