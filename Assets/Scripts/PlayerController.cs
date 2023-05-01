@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 using Valve.VR;
+using Unity.Netcode;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     public GameObject followHead;
     public GameObject dicePrefab;
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if(!IsOwner) return;
+
         if (leftTouchPadInput.axis.magnitude > 0.1f)
         {
             Vector3 headsetDirection = Player.instance.hmdTransform.TransformDirection(new Vector3(leftTouchPadInput.axis.x, 0, leftTouchPadInput.axis.y));
