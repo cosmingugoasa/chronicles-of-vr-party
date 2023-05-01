@@ -214,6 +214,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1569478944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569478945}
+  m_Layer: 3
+  m_Name: PlayerUISpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1569478945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569478944}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.4, z: 4.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5070695878120036846}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804398447
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866441361}
   m_Layer: 3
-  m_Name: DiceSpawnPoint
+  m_Name: PlayerObjectsSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1372,7 +1403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5070695878120037252
 Transform:
   m_ObjectHideFlags: 0
@@ -1557,6 +1588,7 @@ GameObject:
   - component: {fileID: 1323230482}
   - component: {fileID: 1921576828}
   - component: {fileID: 5070695878120368962}
+  - component: {fileID: 1677639576}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -1655,7 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a7a552bc9e5b4ba357d82a783027b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followHead: {fileID: 0}
+  followHead: {fileID: 5070695878120400872}
   dicePrefab: {fileID: 1460813172831222520, guid: ebc20b4f8eff2944b8b70c2519d39642, type: 3}
   playerObjectsSpawn: {fileID: 1866441361}
   leftTouchPadInput:
@@ -1665,6 +1697,23 @@ MonoBehaviour:
     actionPath: /actions/default/in/YButton
     needsReinit: 0
   speed: 2
+--- !u!114 &1677639576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5070695878120394478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb65e7962c5a6a045bc479f925ef2fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCanvas: {fileID: 0}
+  xButtonInput:
+    actionPath: /actions/default/in/XButton
+    needsReinit: 0
+  playerUIPosition: {fileID: 1569478945}
 --- !u!1 &5070695878120396104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1815,7 @@ Transform:
   - {fileID: 5070695878119915650}
   - {fileID: 3503083137294085180}
   - {fileID: 1866441361}
+  - {fileID: 1569478945}
   m_Father: {fileID: 5070695878119931542}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1784,6 +1834,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5070695878120014798}
     m_Modifications:
+    - target: {fileID: 3149847332681417457, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
+      propertyPath: pointerCamera
+      value: 
+      objectReference: {fileID: 1827030478688070027}
+    - target: {fileID: 3149847332681417457, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
+      propertyPath: pointerInputSource
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149847332681417457, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
+      propertyPath: rightTriggerClick.actionPath
+      value: /actions/default/in/InteractUI
+      objectReference: {fileID: 0}
     - target: {fileID: 4901488190745390489, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1834,6 +1896,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
+--- !u!20 &1827030478688070027 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3492846546869924969, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}
+  m_PrefabInstance: {fileID: 2964494351186664930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7865090818670112891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4901488190745390489, guid: 5be2051cb5431bb4da9a189d5d3a0e1d, type: 3}

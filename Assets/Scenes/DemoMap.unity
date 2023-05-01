@@ -5448,7 +5448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '-'
+  m_text: +
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7753,7 +7753,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584961736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.11999857}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7789,7 +7789,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5582948, g: 0.8464154, b: 0.9622642, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -7809,7 +7809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 584961739}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677639576}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: testJoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &584961739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7937,7 +7949,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601319005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.11999857}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8198,7 +8210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &618888904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8206,18 +8218,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618888903}
-  m_LocalRotation: {x: -0, y: -0.18056627, z: -0, w: 0.9835628}
-  m_LocalPosition: {x: 0, y: 0, z: -15.334269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2025891438}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: -20.805, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -29.4, y: 2.44}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618888905
@@ -8270,7 +8282,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1510660460}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -11941,7 +11953,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948243132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.11999857}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11977,7 +11989,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5582948, g: 0.8464154, b: 0.9622642, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -11997,7 +12009,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 948243135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677639576}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: testMinus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &948243135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14193,11 +14217,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4661435515762813124, guid: e289bf5debb17f6459818c207d781953, type: 3}
   m_PrefabInstance: {fileID: 1191436427}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1193962430 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5070695878120400872, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-  m_PrefabInstance: {fileID: 1929466418}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1199017615
 PrefabInstance:
@@ -19066,7 +19085,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603604313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.12}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.013733938, y: 0.013733938, z: 0.013733938}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19923,6 +19942,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2807449429036539767, guid: f0c16f0ea935ea64297ca1d4d55d9746, type: 3}
   m_PrefabInstance: {fileID: 1665948326}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1677639576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1677639576, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+  m_PrefabInstance: {fileID: 1929466418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb65e7962c5a6a045bc479f925ef2fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1678790259
 GameObject:
   m_ObjectHideFlags: 0
@@ -21273,6 +21303,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3899520030807063256, guid: 299e7a1cb6456cf4fa6079cf5978df9b, type: 3}
   m_PrefabInstance: {fileID: 1814017468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1816822344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6096259533547338410, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+  m_PrefabInstance: {fileID: 1929466418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1817643097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21798,7 +21833,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866693465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.11999857}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21834,7 +21869,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5582948, g: 0.8464154, b: 0.9622642, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -21854,7 +21889,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1866693468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677639576}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: testPlus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1866693468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22267,33 +22314,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1866441360, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: m_Name
-      value: PlayerObjectsSpawnPoint
-      objectReference: {fileID: 0}
+    - target: {fileID: 1677639576, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 618888903}
+    - target: {fileID: 1677639576, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+      propertyPath: uiCanvas
+      value: 
+      objectReference: {fileID: 618888903}
+    - target: {fileID: 1677639576, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+      propertyPath: UIPointer
+      value: 
+      objectReference: {fileID: 1816822344}
+    - target: {fileID: 1677639576, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+      propertyPath: playersHead
+      value: 
+      objectReference: {fileID: 1929466419}
     - target: {fileID: 1921576828, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 1249399816
-      objectReference: {fileID: 0}
-    - target: {fileID: 186194125204365075, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: pointerCamera
-      value: 
-      objectReference: {fileID: 1510660460}
-    - target: {fileID: 186194125204365075, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: customEventSystem
-      value: 
-      objectReference: {fileID: 2038168591}
-    - target: {fileID: 186194125204365075, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: pointerInputSource
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 186194125204365075, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: rightTriggerClick.actionPath
-      value: /actions/default/in/InteractUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 2789944558658403273, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5070695878119931542, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
       propertyPath: m_RootOrder
@@ -22339,20 +22378,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5070695878120235564, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5070695878120368962, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-      propertyPath: followHead
-      value: 
-      objectReference: {fileID: 1193962430}
     - target: {fileID: 5070695878120394478, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6096259533547338410, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+--- !u!4 &1929466419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5070695878120036846, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
+  m_PrefabInstance: {fileID: 1929466418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1933866072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23120,7 +23160,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025891437}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -23133,7 +23173,7 @@ RectTransform:
   - {fileID: 1603604314}
   m_Father: {fileID: 618888904}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -23387,17 +23427,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2807449429036539767, guid: f0c16f0ea935ea64297ca1d4d55d9746, type: 3}
   m_PrefabInstance: {fileID: 2033811982}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2038168591 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2789944558658403273, guid: a0a224b97511ebe49a79cae6472c7ced, type: 3}
-  m_PrefabInstance: {fileID: 1929466418}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2040451196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23487,7 +23516,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045574062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.11999857}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23523,7 +23552,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.5582948, g: 0.8464154, b: 0.9622642, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -23543,7 +23572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2045574065}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677639576}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: testCreate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2045574065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24395,6 +24436,10 @@ PrefabInstance:
     - target: {fileID: 1460813172831222520, guid: ebc20b4f8eff2944b8b70c2519d39642, type: 3}
       propertyPath: m_Name
       value: Dice
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460813172831222520, guid: ebc20b4f8eff2944b8b70c2519d39642, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2237736492281667650, guid: ebc20b4f8eff2944b8b70c2519d39642, type: 3}
       propertyPath: m_RootOrder

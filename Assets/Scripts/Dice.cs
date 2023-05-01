@@ -76,7 +76,6 @@ public class Dice : MonoBehaviour
     private void ActivateDiceCanvas(int rolledNumber)
     {
         int index = rolledNumber - 1;
-        Debug.Log($"Index : {index}");
         diceCanvases[index].SetActive(true);
     }
 }

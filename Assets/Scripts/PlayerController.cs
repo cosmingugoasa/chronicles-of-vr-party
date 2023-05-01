@@ -38,8 +38,4 @@ public class PlayerController : MonoBehaviour
         Instantiate(prefab, position).transform.SetParent(null);
     }
 
-    private void AdjustPlayerObjectsSpawnPoint() { 
-        
-    }
-
 }

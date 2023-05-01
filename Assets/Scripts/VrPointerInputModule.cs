@@ -7,7 +7,6 @@ using Valve.VR;
 public class VrPointerInputModule : BaseInputModule
 {
     public Camera pointerCamera;
-    public EventSystem customEventSystem;
     public SteamVR_Input_Sources pointerInputSource;
     public SteamVR_Action_Boolean rightTriggerClick;
 
@@ -19,7 +18,7 @@ public class VrPointerInputModule : BaseInputModule
     {
         base.Awake();
 
-        pointerData = new PointerEventData(customEventSystem);
+        pointerData = new PointerEventData(eventSystem);
     }
 
     public override void Process()
@@ -29,7 +28,7 @@ public class VrPointerInputModule : BaseInputModule
 
         //camera raycasting from player eyes instead of the camera on player controller
 
-        customEventSystem.RaycastAll(pointerData, m_RaycastResultCache);
+        eventSystem.RaycastAll(pointerData, m_RaycastResultCache);
         pointerData.pointerCurrentRaycast = FindFirstRaycast(m_RaycastResultCache);
         
         currentObject = pointerData.pointerCurrentRaycast.gameObject;
@@ -52,10 +51,31 @@ public class VrPointerInputModule : BaseInputModule
     }
 
     private void ProcessPress(PointerEventData data) {
-        Debug.Log("PRESS !");
+        data.pointerPressRaycast = data.pointerCurrentRaycast;
+
+        GameObject newPointerPress = ExecuteEvents.ExecuteHierarchy(currentObject, pointerData, ExecuteEvents.pointerDownHandler);
+
+        if (newPointerPress == null) {
+            newPointerPress = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentObject);
+        }
+
+        data.pressPosition = pointerData.position;
+        data.pointerPress = newPointerPress;
+        data.rawPointerPress = currentObject;
     }
 
     private void ProcessRelease(PointerEventData data) {
-        Debug.Log("RELEASE !");
+        ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
+
+        GameObject pointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentObject);
+
+        if (data.pointerPress == pointerUpHandler) {
+            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerClickHandler);
+        }
+
+        eventSystem.SetSelectedGameObject(null);
+        data.pressPosition = Vector2.zero;
+        data.pointerPress = null;
+        data.rawPointerPress = null;
     }
 }
