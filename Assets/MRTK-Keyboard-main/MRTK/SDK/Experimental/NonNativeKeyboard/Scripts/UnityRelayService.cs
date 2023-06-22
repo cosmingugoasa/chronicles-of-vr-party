@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class UnityRelayService : MonoBehaviour
 {
+    string joinCode;
     async void Start()
     {
         await UnityServices.InitializeAsync();
@@ -24,11 +25,11 @@ public class UnityRelayService : MonoBehaviour
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
     }
 
-    async void CreateRelay() {
+    public async void CreateRelay() {
         try
         {
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(5);
-            string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+            joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             UIController.Instance.SetJoinCodeTextValue(joinCode);
 
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
@@ -40,7 +41,7 @@ public class UnityRelayService : MonoBehaviour
         }
     }
 
-    async void JoinRelay(string joinCode)
+    public async void JoinRelay()
     {
         try {
             Debug.Log($"Joining Relay with code : {joinCode}");
