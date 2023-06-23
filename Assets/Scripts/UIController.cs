@@ -2,28 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.Netcode;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    private static UIController instance = null;
-    public static UIController Instance
-    {
-        get { 
-            if (instance is null)
-                instance = new UIController();
-            return instance;
-        }
-    }
+    public static UIController Instance { get; private set; }
 
     public TMP_Text joinCodeText;
     public List<TMP_Text> lobbyPlayersItems;
+    public TMP_InputField playerName;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void SetJoinCodeTextValue(string joinCode) { 
         joinCodeText.text = joinCode;
     }
 
-    public void AddJoinedPlayerNameInLobby(string name) {
-        lobbyPlayersItems.Where(i => i.text != "Empty").First().text = name;
+    [ClientRpc]
+    public void AddJoinedPlayerNameInLobbyClientRpc(ulong playerID, string name) {
+        lobbyPlayersItems.ElementAt((int)playerID).text = name;
     }
 }

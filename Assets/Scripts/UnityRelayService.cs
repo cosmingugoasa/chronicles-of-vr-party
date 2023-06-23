@@ -23,9 +23,21 @@ public class UnityRelayService : MonoBehaviour
         };
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+        NetworkManager.Singleton.OnClientConnectedCallback += UnityRelay_OnClientConnectedCallback;
+    }
+
+    private void UnityRelay_OnClientConnectedCallback(ulong obj)
+    {
+        Debug.Log($"{nameof(UnityRelay_OnClientConnectedCallback)} - Player connected : {obj}");
+        LobbyManager.Instance.AddReadyPlayer();
     }
 
     public async void CreateRelay() {
+        if (string.IsNullOrEmpty(UIController.Instance.playerName.text)) {
+            return;
+        }
+
         try
         {
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(5);
